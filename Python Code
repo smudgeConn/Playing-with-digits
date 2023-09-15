@@ -1,0 +1,34 @@
+def dig_pow(n, p):
+# output
+    k = 0
+# variables
+    sum = 0
+    exp = p
+    bases = []
+    exponents = []
+    exists = False
+
+# create bases list
+    for i in range(len(str(n))):
+        bases.append(int(str(n)[i]))
+    
+# create exponents list
+    for i in range(len(str(n))):
+        exponents.append(exp)
+        exp += 1
+        
+# loop through bases and exponents list and do math
+    for i in range(len(bases)):
+        sum += bases[i]**exponents[i]
+        
+# determine if k exists
+    if sum % n == 0:
+        exists = True
+        k = sum / n
+        
+# if the number exists, return k
+# if the number DNE, return -1
+    if exists:
+        return k
+    else:
+        return -1
