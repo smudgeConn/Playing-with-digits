@@ -1,0 +1,22 @@
+function digPow(n, p) {
+  console.log(n);
+//   console.log(p);
+  let str = String(n);
+//   console.log(str);
+  let arr = str.split('');
+  console.log(arr);
+  let numbers = [];
+//   for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+       numbers.push(Math.pow(parseInt(arr[j]), (p + j)));
+    }
+  console.log(numbers);
+//   }
+
+  let k = (numbers.reduce((x,y) => x + y))/n;
+  if (Math.floor(k) == k) {
+    return k;
+  } else {
+    return -1;
+  }
+}
